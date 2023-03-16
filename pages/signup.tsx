@@ -8,7 +8,9 @@ const Signup = ({}: SignupIProps) => {
         <Input placeholder="Name" />
         <Input type="email" placeholder="Email" />
         <Input type="password" placeholder="Password" />
-        <Button>Signup</Button>
+        <Button variant="default" size="md">
+          Signup
+        </Button>
       </div>
     </div>
   );

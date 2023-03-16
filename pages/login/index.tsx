@@ -21,7 +21,9 @@ const Login = ({}: LoginIProps) => {
           <label htmlFor="remember"> Remember me</label>
         </div>
 
-        <Button className="w-20">Login</Button>
+        <Button variant="default" size="md" className="w-20">
+          Login
+        </Button>
         <p>
           <Link href={'#'} className="underline hover:text-blue-400">
             Forgot Password?

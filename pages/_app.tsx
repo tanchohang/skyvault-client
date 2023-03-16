@@ -5,7 +5,7 @@ import DashboardLayout from './dashboard/layout';
 
 type ComponentWithLayout = AppProps & {
   Component: AppProps['Component'] & {
-    PageLayout?: ComponentType;
+    PageLayout?: any;
   };
 };
 
