@@ -170,9 +170,10 @@
   dependencies:
     tslib "^2.4.0"
 
-"@tanchohang/langtang-rcl@link:../../langtang":
-  version "0.0.0"
-  uid ""
+"@tanchohang/langtang-rcl@^0.0.1":
+  version "0.0.1"
+  resolved "https://npm.pkg.github.com/download/@tanchohang/langtang-rcl/0.0.1/54f85a8572d92dfa2bcf50d0718951f11d133c76#54f85a8572d92dfa2bcf50d0718951f11d133c76"
+  integrity sha512-7op1ebErGQCiXi6r3VK20xBBQJFS1G8fx7MkF0XL1EKinOxRZodaNq4z0k4YDrbI2NY0uvl8nDeBzRPiBr9/Vg==
 
 "@types/json5@^0.0.29":
   version "0.0.29"
