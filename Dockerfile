@@ -3,7 +3,7 @@ FROM node:alpine
 
 # Set working directory
 WORKDIR /usr/app
-
+COPY ~/.npmrc .
 # Install PM2 globally
 RUN yarn global add pm2
 
