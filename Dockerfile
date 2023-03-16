@@ -9,6 +9,7 @@ RUN yarn global add pm2
 
 # Copy package.json and package-lock.json before other files
 # Utilise Docker cache to save re-installing dependencies if unchanged
+COPY .npmrc ./
 COPY ./package*.json ./
 COPY ./yarn.lock ./
 
