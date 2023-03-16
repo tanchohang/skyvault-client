@@ -1,4 +1,4 @@
-import styles from '../../styles/User.module.css';
+import styles from '../../../styles/User.module.css';
 
 interface UserIProps {}
 const User = ({}: UserIProps) => {
