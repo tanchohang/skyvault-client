@@ -39,7 +39,7 @@ const Signup = ({}) => {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="h-screen flex items-center justify-center">
-        <div className="w-[35%] flex flex-col gap-5 p-10 shadow-lg">
+        <div className="w-[50%] flex flex-col gap-5 p-10 shadow-lg">
           <div className="self-center text-center">
             <Image
               src={logo}

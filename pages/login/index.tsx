@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import logo from '@/public/cloudversify.svg';
+import { signIn } from 'next-auth/react';
 
 interface LoginIProps {}
 interface LoginFormIProps {
@@ -21,6 +22,9 @@ const Login = ({}: LoginIProps) => {
 
   const onSubmit: SubmitHandler<LoginFormIProps> = (data) => {
     console.log(data);
+    signIn('credentials', { email: data.email, password: data.password }).then(
+      (user) => console.log(user)
+    );
   };
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
