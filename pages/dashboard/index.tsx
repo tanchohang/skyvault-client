@@ -10,4 +10,4 @@ const Dashboard = ({}: Props) => {
   );
 };
 export default Dashboard;
-Dashboard.PageLayout = DashboardLayout;
+Dashboard.auth = true;

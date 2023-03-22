@@ -2,12 +2,18 @@ import { Button, SimpleAvatar } from '@tanchohang/langtang-rcl';
 import { signIn, signOut, useSession } from 'next-auth/react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import logo from '../public/cloudversify.svg';
 
 interface Props {}
 const Navbar = (props: Props) => {
   const { data: session } = useSession();
-  console.log(session);
+  const router = useRouter();
+
+  const handleSignout = async () => {
+    const result = await signOut({ redirect: false, callbackUrl: '/login' });
+    router.push(result.url);
+  };
   return (
     <div className="h-[80px] flex flex-row justify-between items-center p-5 shadow-lg">
       <Link href="/" className="flex gap-2">
@@ -32,13 +38,7 @@ const Navbar = (props: Props) => {
 
         {session?.user && (
           <div className="flex gap-5">
-            <Button
-              variant="destructive"
-              size="md"
-              onClick={() => {
-                signOut();
-              }}
-            >
+            <Button variant="destructive" size="md" onClick={handleSignout}>
               Lougout
             </Button>
             <SimpleAvatar

@@ -4,4 +4,4 @@ interface Props {}
 export default function Project({}: Props) {
   return <div>projects</div>;
 }
-Project.PageLayout = DashboardLayout;
+Project.auth = true;

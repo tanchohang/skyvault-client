@@ -5,4 +5,4 @@ function Trash({}: Props) {
   return <div>Trash</div>;
 }
 export default Trash;
-Trash.PageLayout = DashboardLayout;
+Trash.auth = true;
