@@ -5,6 +5,9 @@ import Head from 'next/head';
 import styles from '@/styles/Home.module.css';
 import { loginEndpoint, skyvaultApi } from 'lib/services/endpoint';
 import { useRouter } from 'next/router';
+import { Button } from '@tanchohang/langtang-rcl';
+import Link from 'next/link';
+import { Auth } from './_app';
 
 export default function Home() {
   return (
@@ -15,7 +18,28 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/x-icon" href="/cloudversify.svg" />
       </Head>
-      <main>Sign In to upload Files</main>
+      <main className="flex justify-center items-center h-[80vh]">
+        {/* <div>
+          <h3 className="text-3xl text-stone-900 font-bold pb-5">Sign In to upload Files</h3>
+          <div className="flex justify-evenly">
+            <Link href="/login">
+              <Button size="lg" variant="default">
+                SignIn
+              </Button>
+            </Link>
+            <Link href="/signup">
+              <Button size="lg" variant="default">
+                SignUp
+              </Button>
+            </Link>
+          </div>
+        </div>
+        
+        */}
+        <Auth>
+          <div>Explore Skyvault. To Upload files head over to your dashboard</div>
+        </Auth>
+      </main>
     </>
   );
 }

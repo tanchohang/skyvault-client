@@ -1,6 +1,5 @@
 import { DashboardProvider } from 'context/dashboardContext';
 import { ReactNode, useReducer } from 'react';
-import Actionbar from '../../components/actionbar';
 import Navbar from '../../components/navbar';
 import Sidemenu from '../../components/sidemenu';
 

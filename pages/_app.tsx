@@ -34,7 +34,7 @@ export default function App({ Component, pageProps: { session, ...pageProps } }:
   );
 }
 
-function Auth({ children }: { children: ReactElement }) {
+export function Auth({ children }: { children: ReactElement }) {
   // if `{ required: true }` is supplied, `status` can only be "loading" or "authenticated"
   const { status } = useSession({ required: true });
 
