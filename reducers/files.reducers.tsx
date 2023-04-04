@@ -9,6 +9,7 @@ export type FileType = {
   mimeType: string;
   deleted: boolean;
   archived: boolean;
+  public: boolean;
   originalName: string;
   createdAt: string;
   updatedAt: string;

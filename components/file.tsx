@@ -25,7 +25,7 @@ function AppFile({ file }: Props) {
 
   return (
     <div className="flex flex-col items-center gap-3">
-      <Link href={file.path} className="hover:text-red-500  flex flex-col items-center justify-center">
+      <Link href={file.link as string} className="hover:text-red-500  flex flex-col items-center justify-center">
         <FileImage size={80} />
       </Link>
 
