@@ -41,11 +41,9 @@ const Navbar = (props: Props) => {
             <Button variant="destructive" size="md" onClick={handleSignout}>
               Lougout
             </Button>
-            <SimpleAvatar
-              userImgUrl="http://unsplash.it/200?gravity=north"
-              width={50}
-              height={50}
-            />
+            <Link href="/dashboard">
+              <SimpleAvatar userImgUrl="http://unsplash.it/200?gravity=north" width={50} height={50} />
+            </Link>
           </div>
         )}
       </div>

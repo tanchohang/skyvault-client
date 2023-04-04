@@ -1,11 +1,10 @@
-// import { Label, Input, Button } from '@tanchohang/langtang-rcl/dist/esm';
-import { Button, Input, Label, RadioCheck } from '@tanchohang/langtang-rcl';
+import { Button, Input, Label } from '@tanchohang/langtang-rcl';
 import Image from 'next/image';
 import Link from 'next/link';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import logo from '@/public/cloudversify.svg';
 import { signIn, useSession } from 'next-auth/react';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useRouter } from 'next/router';
 
 interface LoginIProps {}
@@ -24,7 +23,6 @@ const Login = ({}: LoginIProps) => {
 
   const [error, setError] = useState('');
   const router = useRouter();
-
   const { status } = useSession();
 
   const onSubmit: SubmitHandler<LoginFormIProps> = async (data) => {
@@ -53,15 +51,8 @@ const Login = ({}: LoginIProps) => {
         <div className="h-screen flex items-center justify-center">
           <div className=" flex flex-col gap-5 md:w-[50%] sm:w-full m-5 shadow shadow-slate-300 p-10 rounded-sm">
             <div className="self-center text-center">
-              <Image
-                src={logo}
-                alt="skyvault logo"
-                width={100}
-                className="m-auto mb-3"
-              />
-              <h4 className="text-2xl font-extrabold text-center">
-                Login to your SkyVault account
-              </h4>
+              <Image src={logo} alt="skyvault logo" width={100} className="m-auto mb-3" />
+              <h4 className="text-2xl font-extrabold text-center">Login to your SkyVault account</h4>
             </div>
 
             <div className="text-red-500">
