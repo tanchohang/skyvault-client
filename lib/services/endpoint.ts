@@ -1,8 +1,9 @@
 import axios from 'axios';
 
+const baseURL = process.env.NODE_ENV === 'development' ? 'http://localhost:3500/' : 'https://api.skyvault.tanchohang.dev/';
+
 export const skyvaultApi = axios.create({
-  // baseURL: 'https://api.skyvault.tanchohang.dev/',
-  baseURL: 'http://localhost:3500/',
+  baseURL: baseURL,
 
   headers: { 'Content-Type': 'application/json' },
 });
