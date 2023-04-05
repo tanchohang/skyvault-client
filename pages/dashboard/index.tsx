@@ -58,7 +58,7 @@ const Dashboard = ({}: Props) => {
           <UploadForm
             submitHandler={async (formData) => {
               const file = await fileService.uploadFiles({ formData });
-              dispatch({ type: FileActions.ADD_FILES_SUCCESS, payload: [{ id: file.data[0]._id, ...file.data[0] } as FileType] });
+              dispatch({ type: FileActions.ADD_FILES_SUCCESS, payload: file.data.map((f: any) => ({ id: f._id, ...f } as FileType)) });
               setIsFormVisible(false);
             }}
           />
