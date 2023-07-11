@@ -1,6 +1,7 @@
 import { Button } from '@tanchohang/langtang-rcl';
 import { useDashboardContext } from 'context/dashboardContext';
 import { Cross, Delete, FileImage, Trash } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { FileActions, FileType } from 'reducers/files.reducers';
@@ -25,8 +26,8 @@ function AppFile({ file }: Props) {
 
   return (
     <div className="flex flex-col items-center gap-3">
-      <Link href={file.link as string} className="hover:text-red-500  flex flex-col items-center justify-center">
-        <FileImage size={80} />
+      <Link href={file.link!} className="hover:text-red-500  flex flex-col items-center justify-center border">
+        <Image src={file.link!} width={80} height={150} alt={file.fileName} />
       </Link>
 
       <textarea
